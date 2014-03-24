@@ -2,6 +2,7 @@ var express = require('express')
   , Emitter = require('primus-emitter')
   , Primus  = require('primus')
   , engine  = require('ejs-locals')
+  , xmpp    = require('xmpp-ftw')
 
 var app = express()
 
