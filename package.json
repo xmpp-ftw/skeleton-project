@@ -24,6 +24,9 @@
     "url": "https://github.com/xmpp-ftw/skeleton-project/issues"
   },
   "dependencies": {
-    "express": "~3.5.0"
+    "express": "~3.5.0",
+    "primus": "~2.0.4",
+    "primus-emitter": "~3.0.0",
+    "socket.io": "~0.9.16"
   }
 }
