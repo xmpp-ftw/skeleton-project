@@ -1,4 +1,7 @@
 var express = require('express')
+  , Emitter = require('primus-emitter')
+  , Primus  = require('primus')
+
 var app = express()
 
 app.get('/', function(req, res){
