@@ -1,8 +1,9 @@
-var express = require('express')
-  , Emitter = require('primus-emitter')
-  , Primus  = require('primus')
-  , engine  = require('ejs-locals')
-  , xmpp    = require('xmpp-ftw')
+var express    = require('express')
+  , Emitter    = require('primus-emitter')
+  , Primus     = require('primus')
+  , engine     = require('ejs-locals')
+  , xmpp       = require('xmpp-ftw')
+  , Buddycloud = require('xmpp-ftw-buddycloud')
 
 var app = express()
 
@@ -46,6 +47,7 @@ primus.save(__dirname + '/public/scripts/primus.js')
 primus.on('connection', function(socket) {
     console.log('Websocket connection made')
     var xmppFtw = new xmpp.Xmpp(socket)
+    xmppFtw.addListener(new Buddycloud())
     socket.xmppFtw = xmppFtw
 })
 

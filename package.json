@@ -29,6 +29,7 @@
     "primus-emitter": "~3.0.0",
     "socket.io": "~0.9.16",
     "xmpp-ftw": "~1.3.4",
-    "ejs-locals": "~1.0.2"
+    "ejs-locals": "~1.0.2",
+    "xmpp-ftw-buddycloud": "~1.0.6"
   }
 }
