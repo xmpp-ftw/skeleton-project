@@ -2,6 +2,23 @@
 <html>
     <head>
         <script type="text/javascript" src="/scripts/primus.js"></script>
+        <script type="text/javascript">
+        var socket = new Primus('//' + window.document.location.host)
+        socket.on('error', function(error) { console.error(error) })
+
+        socket.on('open', function() {
+            console.log('Connected')
+        })
+
+        socket.on('timeout', function(reason) {
+            console.error('Connection failed: ' + reason)
+        })
+
+        socket.on('end', function() {
+            console.log('Socket connection closed')
+            socket = null
+        })
+        </script>
     </head>
     <body>
         <h1>Welcome to my XMPP-FTW project</h1>
