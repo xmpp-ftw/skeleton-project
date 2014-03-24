@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
         <script type="text/javascript" src="/scripts/primus.js"></script>
         <script type="text/javascript"
                 src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
@@ -72,6 +74,7 @@
         </script>
     </head>
     <body>
+    <div id="container">
         <h1>Welcome to my XMPP-FTW project</h1>
 
         <p>Please see <a href="https://github.com/xmpp-ftw/skeleton-project.git">github</a> for more information.</p>
@@ -80,28 +83,28 @@
 
         <p>To quickly get started perform the following actions:</p>
 
-        <code>
-            git clone git@github.com:xmpp-ftw/skeleton-project.git<br/>
-            cd skeleton-project<br/>
-            npm i .<br/>
-            npm start &amp;<br/>
+        <pre>
+            git clone git@github.com:xmpp-ftw/skeleton-project.git
+            cd skeleton-project
+            npm i .
+            npm start &amp;
             open http://localhost:3000
-        </code>
+        </pre>
 
         <h2>Adding additional XMPP-FTW modules</h2>
 
         <p>To use the additional module you wish to use do the following:</p>
 
-        <code>
+        <pre>
             npm i --save xmpp-ftw-&lt;project&gt;
-        </code>
+        </pre>
 
         <p>Then add the following call at <a href="https://github.com/xmpp-ftw/skeleton-project/blob/master/index.js#L48"><strong>line 48</strong> in <em>index.js</em></a>:</p>
 
-        <code>
-            var Module = require('xmpp-ftw-&lt;project&gt;')<br/>
+        <pre>
+            var Module = require('xmpp-ftw-&lt;project&gt;')
             xmppFtw.addListener(new Module())
-        </code>
+        </pre>
 
         <h2>Example</h2>
 
@@ -115,5 +118,6 @@
 
         <p>...or see the real posts at the <a href="https://demo.buddycloud.org/team@topics.buddycloud.org">Buddycloud developer channel</a>.</p>
 
+    </div>
     </body>
 </html>
