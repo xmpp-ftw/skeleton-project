@@ -5,5 +5,35 @@
     </head>
     <body>
         <h1>Welcome to my XMPP-FTW project</h1>
+
+        <p>Please see <a href="https://github.com/xmpp-ftw/skeleton-project.git">github</a> for more information.</p>
+
+        <h2>Getting started</h2>
+
+        <p>To quickly get started perform the following actions:</p>
+
+        <code>
+            git clone git@github.com:xmpp-ftw/skeleton-project.git<br/>
+            cd skeleton-project<br/>
+            npm i .<br/>
+            npm start &amp;<br/>
+            open http://localhost:3000
+        </code>
+
+        <h2>Adding additional XMPP-FTW modules</h2>
+
+        <p>To use the additional module you wish to use do the following:</p>
+
+        <code>
+            npm i --save xmpp-ftw-&lt;project&gt;
+        </code>
+
+        <p>Then add the following call at <a href="https://github.com/xmpp-ftw/skeleton-project/blob/master/index.js#L48"><strong>line 48</strong> in <em>index.js</em></a>:</p>
+
+        <code>
+            var Module = require('xmpp-ftw-&lt;project&gt;')<br/>
+            xmppFtw.addListener(new Module())
+        </code>
+
     </body>
 </html>
