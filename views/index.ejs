@@ -2,21 +2,25 @@
 <html>
     <head>
         <script type="text/javascript" src="/scripts/primus.js"></script>
+        <script type="text/javascript"
+                src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
         <script type="text/javascript">
+        $(window.document).ready(function() {
         var socket = new Primus('//' + window.document.location.host)
-        socket.on('error', function(error) { console.error(error) })
+            socket.on('error', function(error) { console.error(error) })
 
-        socket.on('open', function() {
-            console.log('Connected')
-        })
+            socket.on('open', function() {
+                console.log('Connected')
+            })
 
-        socket.on('timeout', function(reason) {
-            console.error('Connection failed: ' + reason)
-        })
+            socket.on('timeout', function(reason) {
+                console.error('Connection failed: ' + reason)
+            })
 
-        socket.on('end', function() {
-            console.log('Socket connection closed')
-            socket = null
+            socket.on('end', function() {
+                console.log('Socket connection closed')
+                socket = null
+            })
         })
         </script>
     </head>
