@@ -8,6 +8,7 @@
                 src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
         <script type="text/javascript">
         $(window.document).ready(function() {
+
             var socket = new Primus('//' + window.document.location.host)
 
             socket.on('error', function(error) { console.error(error) })
@@ -45,6 +46,7 @@
                     }
                 )
             }
+
             var login = function() {
                 socket.send(
                     'xmpp.login.anonymous',
@@ -55,7 +57,6 @@
                     discoverBuddycloudServer()
                 })
             }
-
 
             socket.on('open', function() {
                 console.log('Connected')
@@ -110,7 +111,7 @@
 
         <p>The code anonymously connects to <a href="http://buddycloud.com">Buddycloud.com</a> and pulls the latest 5 posts from the development channel.</p>
 
-        <p>Please see the source of this file for an example.</p>
+        <p>Please see the <a href="https://github.com/xmpp-ftw/skeleton-project/blob/master/views/index.ejs">source of this file</a> for the code.</p>
 
         <h3>Posts</h3>
 

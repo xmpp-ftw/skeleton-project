@@ -16,3 +16,11 @@ pre {
     background-color: #EEEEEE;
     padding: 10px 0 0 0;
 }
+
+ul li {
+    color: #0000ff;
+}
+
+ul {
+    margin-left: 50px;
+}
