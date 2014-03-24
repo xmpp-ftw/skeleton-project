@@ -29,8 +29,11 @@ primus.save(__dirname + '/public/scripts/primus.js')
 
 primus.on('connection', function(socket) {
     console.log('Websocket connection made')
+    var xmppFtw = new xmpp.Xmpp(socket)
+    socket.xmppFtw = xmppFtw
 })
 
 primus.on('disconnection', function(socket) {
-    console.log('Client disconnected')
+    console.log('Client disconnected, logging them out')
+    socket.xmppFtw.logout()
 })
