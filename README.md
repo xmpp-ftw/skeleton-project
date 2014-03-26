@@ -8,12 +8,12 @@ setup:
 ------
 once checked out run:
 
-npm i .
+```npm i```
 
 ...to install dependencies, then,
 
-npm start
+```npm start```
 
 ...which will start a server on port 3000
 
-Then visit http://localhost:3000
+Then visit [http://localhost:3000](http://localhost:3000)
