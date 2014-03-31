@@ -71,6 +71,14 @@
                 console.log('Socket connection closed')
                 socket = null
             })
+            
+            socket.on('xmpp.error', function(error) {
+                console.error('XMPP-FTW error', error)
+            })
+            
+            socket.on('xmpp.error.client', function(error) {
+                console.error('XMPP-FTW client error', error)
+            })
         })
         </script>
     </head>
