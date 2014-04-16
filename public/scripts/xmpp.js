@@ -6,6 +6,7 @@ $(window.document).ready(function() {
 
   var handleItems = function(error, items) {
       if (error) return console.error(error)
+      console.log('Node items received', items)
       $('ul.posts').empty()
       var content
       items.forEach(function(item) {
@@ -19,6 +20,7 @@ $(window.document).ready(function() {
   }
 
   var getNodeItems = function() {
+      console.log('Retrieving node items')
       socket.send(
           'xmpp.buddycloud.retrieve',
           { node: '/user/team@topics.buddycloud.org/posts', rsm: { max: 5 } },
