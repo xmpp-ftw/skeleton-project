@@ -26,7 +26,7 @@
     "express": "~3.5.0",
     "primus": "~2.0.4",
     "primus-emitter": "~3.0.0",
-    "socket.io": "~0.9.16",
+    "socket.io": "~1.0.1",
     "xmpp-ftw": "1.x",
     "ejs-locals": "~1.0.2",
     "xmpp-ftw-buddycloud": "1.x"
