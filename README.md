@@ -1,6 +1,8 @@
 skeleton-project
 ================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/xmpp-ftw/skeleton-project.svg)](https://greenkeeper.io/)
+
 A skeleton project for starting to build XMPP projects using XMPP-FTW
 
 
